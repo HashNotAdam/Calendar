@@ -3,5 +3,4 @@ CalendarExample::Application.routes.draw do
   resource :calendar, only: [:show], controller: :calendar
   root to: 'calendar#show'
   resources :events, only: [:show, :new, :index]
-
 end
