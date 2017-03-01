@@ -79,77 +79,78 @@ Style/Alias:
     - prefer_alias
     - prefer_alias_method
 
+# Rubocop 0.47.1
 # Align the elements of a hash literal if they span more than one line.
-Style/AlignHash:
-  # Alignment of entries using hash rocket as separator. Valid values are:
-  #
-  # key - left alignment of keys
-  #   'a' => 2
-  #   'bb' => 3
-  # separator - alignment of hash rockets, keys are right aligned
-  #    'a' => 2
-  #   'bb' => 3
-  # table - left alignment of keys, hash rockets, and values
-  #   'a'  => 2
-  #   'bb' => 3
-  EnforcedHashRocketStyle: key
-  SupportedHashRocketStyles:
-    - key
-    - separator
-    - table
-  # Alignment of entries using colon as separator. Valid values are:
-  #
-  # key - left alignment of keys
-  #   a: 0
-  #   bb: 1
-  # separator - alignment of colons, keys are right aligned
-  #    a: 0
-  #   bb: 1
-  # table - left alignment of keys and values
-  #   a:  0
-  #   bb: 1
-  EnforcedColonStyle: key
-  SupportedColonStyles:
-    - key
-    - separator
-    - table
-  # Select whether hashes that are the last argument in a method call should be
-  # inspected? Valid values are:
-  #
-  # always_inspect - Inspect both implicit and explicit hashes.
-  #   Registers an offense for:
-  #     function(a: 1,
-  #       b: 2)
-  #   Registers an offense for:
-  #     function({a: 1,
-  #       b: 2})
-  # always_ignore - Ignore both implicit and explicit hashes.
-  #   Accepts:
-  #     function(a: 1,
-  #       b: 2)
-  #   Accepts:
-  #     function({a: 1,
-  #       b: 2})
-  # ignore_implicit - Ignore only implicit hashes.
-  #   Accepts:
-  #     function(a: 1,
-  #       b: 2)
-  #   Registers an offense for:
-  #     function({a: 1,
-  #       b: 2})
-  # ignore_explicit - Ignore only explicit hashes.
-  #   Accepts:
-  #     function({a: 1,
-  #       b: 2})
-  #   Registers an offense for:
-  #     function(a: 1,
-  #       b: 2)
-  EnforcedLastArgumentHashStyle: always_inspect
-  SupportedLastArgumentHashStyles:
-    - always_inspect
-    - always_ignore
-    - ignore_implicit
-    - ignore_explicit
+# Style/AlignHash:
+#   # Alignment of entries using hash rocket as separator. Valid values are:
+#   #
+#   # key - left alignment of keys
+#   #   'a' => 2
+#   #   'bb' => 3
+#   # separator - alignment of hash rockets, keys are right aligned
+#   #    'a' => 2
+#   #   'bb' => 3
+#   # table - left alignment of keys, hash rockets, and values
+#   #   'a'  => 2
+#   #   'bb' => 3
+#   EnforcedHashRocketStyle: key
+#   SupportedHashRocketStyles:
+#     - key
+#     - separator
+#     - table
+#   # Alignment of entries using colon as separator. Valid values are:
+#   #
+#   # key - left alignment of keys
+#   #   a: 0
+#   #   bb: 1
+#   # separator - alignment of colons, keys are right aligned
+#   #    a: 0
+#   #   bb: 1
+#   # table - left alignment of keys and values
+#   #   a:  0
+#   #   bb: 1
+#   EnforcedColonStyle: key
+#   SupportedColonStyles:
+#     - key
+#     - separator
+#     - table
+#   # Select whether hashes that are the last argument in a method call should be
+#   # inspected? Valid values are:
+#   #
+#   # always_inspect - Inspect both implicit and explicit hashes.
+#   #   Registers an offense for:
+#   #     function(a: 1,
+#   #       b: 2)
+#   #   Registers an offense for:
+#   #     function({a: 1,
+#   #       b: 2})
+#   # always_ignore - Ignore both implicit and explicit hashes.
+#   #   Accepts:
+#   #     function(a: 1,
+#   #       b: 2)
+#   #   Accepts:
+#   #     function({a: 1,
+#   #       b: 2})
+#   # ignore_implicit - Ignore only implicit hashes.
+#   #   Accepts:
+#   #     function(a: 1,
+#   #       b: 2)
+#   #   Registers an offense for:
+#   #     function({a: 1,
+#   #       b: 2})
+#   # ignore_explicit - Ignore only explicit hashes.
+#   #   Accepts:
+#   #     function({a: 1,
+#   #       b: 2})
+#   #   Registers an offense for:
+#   #     function(a: 1,
+#   #       b: 2)
+#   EnforcedLastArgumentHashStyle: always_inspect
+#   SupportedLastArgumentHashStyles:
+#     - always_inspect
+#     - always_ignore
+#     - ignore_implicit
+#     - ignore_explicit
 
 Style/AlignParameters:
   # Alignment of parameters in multi-line method calls.
@@ -274,17 +275,18 @@ Style/BracesAroundHashParameters:
     # also a hash literal.
     - context_dependent
 
+# Rubocop 0.47.1
 # Indentation of `when`.
-Style/CaseIndentation:
-  EnforcedStyle: case
-  SupportedStyles:
-    - case
-    - end
-  IndentOneStep: false
-  # By default, the indentation width from `Style/IndentationWidth` is used.
-  # But it can be overridden by setting this parameter.
-  # This only matters if `IndentOneStep` is `true`
-  IndentationWidth: ~
+# Style/CaseIndentation:
+#   EnforcedStyle: case
+#   SupportedStyles:
+#     - case
+#     - end
+#   IndentOneStep: false
+#   # By default, the indentation width from `Style/IndentationWidth` is used.
+#   # But it can be overridden by setting this parameter.
+#   # This only matters if `IndentOneStep` is `true`
+#   IndentationWidth: ~
 
 Style/ClassAndModuleChildren:
   # Checks the style of children definitions at classes and modules.
@@ -351,19 +353,20 @@ Style/CommentAnnotation:
     - HACK
     - REVIEW
 
-Style/ConditionalAssignment:
-  EnforcedStyle: assign_to_condition
-  SupportedStyles:
-    - assign_to_condition
-    - assign_inside_condition
-  # When configured to `assign_to_condition`, `SingleLineConditionsOnly`
-  # will only register an offense when all branches of a condition are
-  # a single line.
-  # When configured to `assign_inside_condition`, `SingleLineConditionsOnly`
-  # will only register an offense for assignment to a condition that has
-  # at least one multiline branch.
-  SingleLineConditionsOnly: true
-  IncludeTernaryExpressions: true
+# Rubocop 0.47.1
+# Style/ConditionalAssignment:
+#   EnforcedStyle: assign_to_condition
+#   SupportedStyles:
+#     - assign_to_condition
+#     - assign_inside_condition
+#   # When configured to `assign_to_condition`, `SingleLineConditionsOnly`
+#   # will only register an offense when all branches of a condition are
+#   # a single line.
+#   # When configured to `assign_inside_condition`, `SingleLineConditionsOnly`
+#   # will only register an offense for assignment to a condition that has
+#   # at least one multiline branch.
+#   SingleLineConditionsOnly: true
+#   IncludeTernaryExpressions: true
 
 # Checks that you have put a copyright in a comment before any code.
 #
@@ -475,65 +478,66 @@ Style/ExtraSpacing:
   # When true, forces the alignment of `=` in assignments on consecutive lines.
   ForceEqualSignAlignment: false
 
-Style/FileName:
-  # File names listed in `AllCops:Include` are excluded by default. Add extra
-  # excludes here.
-  Exclude: []
-  # When `true`, requires that each source file should define a class or module
-  # with a name which matches the file name (converted to ... case).
-  # It further expects it to be nested inside modules which match the names
-  # of subdirectories in its path.
-  ExpectMatchingDefinition: false
-  # If non-`nil`, expect all source file names to match the following regex.
-  # Only the file name itself is matched, not the entire file path.
-  # Use anchors as necessary if you want to match the entire name rather than
-  # just a part of it.
-  Regex: ~
-  # With `IgnoreExecutableScripts` set to `true`, this cop does not
-  # report offending filenames for executable scripts (i.e. source
-  # files with a shebang in the first line).
-  IgnoreExecutableScripts: true
-  AllowedAcronyms:
-    - CLI
-    - DSL
-    - ACL
-    - API
-    - ASCII
-    - CPU
-    - CSS
-    - DNS
-    - EOF
-    - GUID
-    - HTML
-    - HTTP
-    - HTTPS
-    - ID
-    - IP
-    - JSON
-    - LHS
-    - QPS
-    - RAM
-    - RHS
-    - RPC
-    - SLA
-    - SMTP
-    - SQL
-    - SSH
-    - TCP
-    - TLS
-    - TTL
-    - UDP
-    - UI
-    - UID
-    - UUID
-    - URI
-    - URL
-    - UTF8
-    - VM
-    - XML
-    - XMPP
-    - XSRF
-    - XSS
+# Rubocop 0.47.1
+# Style/FileName:
+#   # File names listed in `AllCops:Include` are excluded by default. Add extra
+#   # excludes here.
+#   Exclude: []
+#   # When `true`, requires that each source file should define a class or module
+#   # with a name which matches the file name (converted to ... case).
+#   # It further expects it to be nested inside modules which match the names
+#   # of subdirectories in its path.
+#   ExpectMatchingDefinition: false
+#   # If non-`nil`, expect all source file names to match the following regex.
+#   # Only the file name itself is matched, not the entire file path.
+#   # Use anchors as necessary if you want to match the entire name rather than
+#   # just a part of it.
+#   Regex: ~
+#   # With `IgnoreExecutableScripts` set to `true`, this cop does not
+#   # report offending filenames for executable scripts (i.e. source
+#   # files with a shebang in the first line).
+#   IgnoreExecutableScripts: true
+#   AllowedAcronyms:
+#     - CLI
+#     - DSL
+#     - ACL
+#     - API
+#     - ASCII
+#     - CPU
+#     - CSS
+#     - DNS
+#     - EOF
+#     - GUID
+#     - HTML
+#     - HTTP
+#     - HTTPS
+#     - ID
+#     - IP
+#     - JSON
+#     - LHS
+#     - QPS
+#     - RAM
+#     - RHS
+#     - RPC
+#     - SLA
+#     - SMTP
+#     - SQL
+#     - SSH
+#     - TCP
+#     - TLS
+#     - TTL
+#     - UDP
+#     - UI
+#     - UID
+#     - UUID
+#     - URI
+#     - URL
+#     - UTF8
+#     - VM
+#     - XML
+#     - XMPP
+#     - XSRF
+#     - XSS
 
 Style/FirstParameterIndentation:
   EnforcedStyle: special_for_inner_method_call_in_parentheses
@@ -728,8 +732,9 @@ Style/LambdaCall:
     - call
     - braces
 
-Style/MethodCallWithArgsParentheses:
-  IgnoredMethods: []
+# Rubocop 0.47.1
+# Style/MethodCallWithArgsParentheses:
+#   IgnoredMethods: []
 
 Style/MethodDefParentheses:
   EnforcedStyle: require_parentheses
@@ -995,11 +1000,12 @@ Style/SingleLineBlockParams:
 Style/SingleLineMethods:
   AllowIfMethodIsEmpty: true
 
-Style/SpaceAroundBlockParameters:
-  EnforcedStyleInsidePipes: no_space
-  SupportedStylesInsidePipes:
-    - space
-    - no_space
+# Rubocop 0.47.1
+# Style/SpaceAroundBlockParameters:
+#   EnforcedStyleInsidePipes: no_space
+#   SupportedStylesInsidePipes:
+#     - space
+#     - no_space
 
 Style/SpaceAroundEqualsInParameterDefault:
   EnforcedStyle: space
@@ -1025,30 +1031,32 @@ Style/SpaceBeforeFirstArg:
   # lines.
   AllowForAlignment: true
 
-Style/SpaceInsideBlockBraces:
-  EnforcedStyle: space
-  SupportedStyles:
-    - space
-    - no_space
-  EnforcedStyleForEmptyBraces: no_space
-  SupportedStylesForEmptyBraces:
-    - space
-    - no_space
-  # Space between `{` and `|`. Overrides `EnforcedStyle` if there is a conflict.
-  SpaceBeforeBlockParameters: true
+# Rubocop 0.47.1
+# Style/SpaceInsideBlockBraces:
+#   EnforcedStyle: space
+#   SupportedStyles:
+#     - space
+#     - no_space
+#   EnforcedStyleForEmptyBraces: no_space
+#   SupportedStylesForEmptyBraces:
+#     - space
+#     - no_space
+#   # Space between `{` and `|`. Overrides `EnforcedStyle` if there is a conflict.
+#   SpaceBeforeBlockParameters: true
 
-Style/SpaceInsideHashLiteralBraces:
-  EnforcedStyle: space
-  SupportedStyles:
-    - space
-    - no_space
-    # 'compact' normally requires a space inside hash braces, with the exception
-    # that successive left braces or right braces are collapsed together
-    - compact
-  EnforcedStyleForEmptyBraces: no_space
-  SupportedStylesForEmptyBraces:
-    - space
-    - no_space
+# Rubocop 0.47.1
+# Style/SpaceInsideHashLiteralBraces:
+#   EnforcedStyle: space
+#   SupportedStyles:
+#     - space
+#     - no_space
+#     # 'compact' normally requires a space inside hash braces, with the exception
+#     # that successive left braces or right braces are collapsed together
+#     - compact
+#   EnforcedStyleForEmptyBraces: no_space
+#   SupportedStylesForEmptyBraces:
+#     - space
+#     - no_space
 
 Style/SpaceInsideStringInterpolation:
   EnforcedStyle: no_space
@@ -1120,27 +1128,29 @@ Style/TrailingBlankLines:
     - final_newline
     - final_blank_line
 
-Style/TrailingCommaInArguments:
-  # If `comma`, the cop requires a comma after the last argument, but only for
-  # parenthesized method calls where each argument is on its own line.
-  # If `consistent_comma`, the cop requires a comma after the last argument,
-  # for all parenthesized method calls with arguments.
-  EnforcedStyleForMultiline: no_comma
-  SupportedStylesForMultiline:
-    - comma
-    - consistent_comma
-    - no_comma
+# Rubocop 0.47.1
+# Style/TrailingCommaInArguments:
+#   # If `comma`, the cop requires a comma after the last argument, but only for
+#   # parenthesized method calls where each argument is on its own line.
+#   # If `consistent_comma`, the cop requires a comma after the last argument,
+#   # for all parenthesized method calls with arguments.
+#   EnforcedStyleForMultiline: no_comma
+#   SupportedStylesForMultiline:
+#     - comma
+#     - consistent_comma
+#     - no_comma
 
-Style/TrailingCommaInLiteral:
-  # If `comma`, the cop requires a comma after the last item in an array or
-  # hash, but only when each item is on its own line.
-  # If `consistent_comma`, the cop requires a comma after the last item of all
-  # non-empty array and hash literals.
-  EnforcedStyleForMultiline: no_comma
-  SupportedStylesForMultiline:
-    - comma
-    - consistent_comma
-    - no_comma
+# Rubocop 0.47.1
+# Style/TrailingCommaInLiteral:
+#   # If `comma`, the cop requires a comma after the last item in an array or
+#   # hash, but only when each item is on its own line.
+#   # If `consistent_comma`, the cop requires a comma after the last item of all
+#   # non-empty array and hash literals.
+#   EnforcedStyleForMultiline: no_comma
+#   SupportedStylesForMultiline:
+#     - comma
+#     - consistent_comma
+#     - no_comma
 
 # `TrivialAccessors` requires exact name matches and doesn't allow
 # predicated methods by default.
@@ -1222,14 +1232,16 @@ Metrics/AbcSize:
   # a Float.
   Max: 15
 
-Metrics/BlockLength:
-  CountComments: false  # count full line comments?
-  Max: 25
-  ExcludedMethods: []
+# Rubocop 0.47.1
+# Metrics/BlockLength:
+#   CountComments: false  # count full line comments?
+#   Max: 25
+#   ExcludedMethods: []
 
-Metrics/BlockNesting:
-  CountBlocks: false
-  Max: 3
+# Rubocop 0.47.1
+# Metrics/BlockNesting:
+#   CountBlocks: false
+#   Max: 3
 
 Metrics/ClassLength:
   CountComments: false  # count full line comments?
@@ -1278,52 +1290,55 @@ Metrics/PerceivedComplexity:
 Lint/AssignmentInCondition:
   AllowSafeAssignment: true
 
+# Rubocop 0.47.1
 # checks whether the end keywords are aligned properly for `do` `end` blocks.
-Lint/BlockAlignment:
-  # The value `start_of_block` means that the `end` should be aligned with line
-  # where the `do` keyword appears.
-  # The value `start_of_line` means it should be aligned with the whole
-  # expression's starting line.
-  # The value `either` means both are allowed.
-  EnforcedStyleAlignWith: either
-  SupportedStylesAlignWith:
-    - either
-    - start_of_block
-    - start_of_line
+# Lint/BlockAlignment:
+#   # The value `start_of_block` means that the `end` should be aligned with line
+#   # where the `do` keyword appears.
+#   # The value `start_of_line` means it should be aligned with the whole
+#   # expression's starting line.
+#   # The value `either` means both are allowed.
+#   EnforcedStyleAlignWith: either
+#   SupportedStylesAlignWith:
+#     - either
+#     - start_of_block
+#     - start_of_line
 
-Lint/DefEndAlignment:
-  # The value `def` means that `end` should be aligned with the def keyword.
-  # The value `start_of_line` means that `end` should be aligned with method
-  # calls like `private`, `public`, etc, if present in front of the `def`
-  # keyword on the same line.
-  EnforcedStyleAlignWith: start_of_line
-  SupportedStylesAlignWith:
-    - start_of_line
-    - def
-  AutoCorrect: false
+# Rubocop 0.47.1
+# Lint/DefEndAlignment:
+#   # The value `def` means that `end` should be aligned with the def keyword.
+#   # The value `start_of_line` means that `end` should be aligned with method
+#   # calls like `private`, `public`, etc, if present in front of the `def`
+#   # keyword on the same line.
+#   EnforcedStyleAlignWith: start_of_line
+#   SupportedStylesAlignWith:
+#     - start_of_line
+#     - def
+#   AutoCorrect: false
 
+# Rubocop 0.47.1
 # Align ends correctly.
-Lint/EndAlignment:
-  # The value `keyword` means that `end` should be aligned with the matching
-  # keyword (`if`, `while`, etc.).
-  # The value `variable` means that in assignments, `end` should be aligned
-  # with the start of the variable on the left hand side of `=`. In all other
-  # situations, `end` should still be aligned with the keyword.
-  # The value `start_of_line` means that `end` should be aligned with the start
-  # of the line which the matching keyword appears on.
-  EnforcedStyleAlignWith: keyword
-  SupportedStylesAlignWith:
-    - keyword
-    - variable
-    - start_of_line
-  AutoCorrect: false
-
-Lint/InheritException:
-  # The default base class in favour of `Exception`.
-  EnforcedStyle: runtime_error
-  SupportedStyles:
-    - runtime_error
-    - standard_error
+# Lint/EndAlignment:
+#   # The value `keyword` means that `end` should be aligned with the matching
+#   # keyword (`if`, `while`, etc.).
+#   # The value `variable` means that in assignments, `end` should be aligned
+#   # with the start of the variable on the left hand side of `=`. In all other
+#   # situations, `end` should still be aligned with the keyword.
+#   # The value `start_of_line` means that `end` should be aligned with the start
+#   # of the line which the matching keyword appears on.
+#   EnforcedStyleAlignWith: keyword
+#   SupportedStylesAlignWith:
+#     - keyword
+#     - variable
+#     - start_of_line
+#   AutoCorrect: false
+#
+# Lint/InheritException:
+#   # The default base class in favour of `Exception`.
+#   EnforcedStyle: runtime_error
+#   SupportedStyles:
+#     - runtime_error
+#     - standard_error
 
 # Rubocop 0.47.1
 # Lint/SafeNavigationChain:
@@ -1425,9 +1440,10 @@ Rails/RequestReferer:
     - referer
     - referrer
 
-Rails/ReversibleMigration:
-  Include:
-    - db/migrate/*.rb
+# Rubocop 0.47.1
+# Rails/ReversibleMigration:
+#   Include:
+#     - db/migrate/*.rb
 
 Rails/SafeNavigation:
   # This will convert usages of `try` to use safe navigation as well as `try!`.
@@ -1448,26 +1464,28 @@ Rails/TimeZone:
     - strict
     - flexible
 
-Rails/UniqBeforePluck:
-  EnforcedStyle: conservative
-  SupportedStyles:
-    - conservative
-    - aggressive
-  AutoCorrect: false
+# Rubocop 0.47.1
+# Rails/UniqBeforePluck:
+#   EnforcedStyle: conservative
+#   SupportedStyles:
+#     - conservative
+#     - aggressive
+#   AutoCorrect: false
 
-Rails/SkipsModelValidations:
-  Blacklist:
-    - decrement!
-    - decrement_counter
-    - increment!
-    - increment_counter
-    - toggle!
-    - touch
-    - update_all
-    - update_attribute
-    - update_column
-    - update_columns
-    - update_counters
+# Rubocop 0.47.1
+# Rails/SkipsModelValidations:
+#   Blacklist:
+#     - decrement!
+#     - decrement_counter
+#     - increment!
+#     - increment_counter
+#     - toggle!
+#     - touch
+#     - update_all
+#     - update_attribute
+#     - update_column
+#     - update_columns
+#     - update_counters
 
 Rails/Validation:
   Include:
