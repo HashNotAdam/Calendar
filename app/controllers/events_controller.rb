@@ -19,10 +19,10 @@ class EventsController < ApplicationController
     @events = Event.where(date_and_time: start_of_day..end_of_day)
   end
 
-  def show
-  end
+  def show; end
 
   private
+
   def event_params
     params.require(:event).permit(:name, :date_and_time, :location)
   end
