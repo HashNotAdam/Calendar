@@ -456,15 +456,16 @@ Style/Encoding:
     - never
   AutoCorrectEncodingComment: '# encoding: utf-8'
 
-Style/EndOfLine:
-  # The `native` style means that CR+LF (Carriage Return + Line Feed) is
-  # enforced on Windows, and LF is enforced on other platforms. The other styles
-  # mean LF and CR+LF, respectively.
-  EnforcedStyle: native
-  SupportedStyles:
-    - native
-    - lf
-    - crlf
+# Rubocop > 0.47.1
+# Style/EndOfLine:
+#   # The `native` style means that CR+LF (Carriage Return + Line Feed) is
+#   # enforced on Windows, and LF is enforced on other platforms. The other styles
+#   # mean LF and CR+LF, respectively.
+#   EnforcedStyle: native
+#   SupportedStyles:
+#     - native
+#     - lf
+#     - crlf
 
 Style/ExtraSpacing:
   # When true, allows most uses of extra spacing if the intent is to align
@@ -676,35 +677,37 @@ Style/IndentHash:
   # But it can be overridden by setting this parameter
   IndentationWidth: ~
 
-Style/IndentHeredoc:
-  EnforcedStyle: ruby23
-  SupportedStyles:
-    - ruby23
-    - active_support
-    - powerpack
-    - unindent
+# Rubocop > 0.47.1
+# Style/IndentHeredoc:
+#   EnforcedStyle: ruby23
+#   SupportedStyles:
+#     - ruby23
+#     - active_support
+#     - powerpack
+#     - unindent
 
-Style/InverseMethods:
-  Enabled: true
-  # `InverseMethods` are methods that can be inverted by a not (`not` or `!`)
-  # The relationship of inverse methods only needs to be defined in one direction.
-  # Keys and values both need to be defined as symbols.
-  # InverseMethods:
-  #   :any?: :none?
-  #   :even?: :odd?
-  #   :==: :!=
-  #   :=~: :!~
-  #   :<: :>=
-  #   :>: :<=
-    # `ActiveSupport` defines some common inverse methods. They are listed below,
-    # and not enabled by default.
-    #:present?: :blank?,
-    #:include?: :exclude?
-  # `InverseBlocks` are methods that are inverted by inverting the return
-  # of the block that is passed to the method
-  # InverseBlocks:
-  #   :select: :reject
-  #   :select!: :reject!
+# Rubocop > 0.47.1
+# Style/InverseMethods:
+#   Enabled: true
+#   `InverseMethods` are methods that can be inverted by a not (`not` or `!`)
+#   The relationship of inverse methods only needs to be defined in one direction.
+#   Keys and values both need to be defined as symbols.
+#   InverseMethods:
+#     :any?: :none?
+#     :even?: :odd?
+#     :==: :!=
+#     :=~: :!~
+#     :<: :>=
+#     :>: :<=
+#     `ActiveSupport` defines some common inverse methods. They are listed below,
+#     and not enabled by default.
+#     :present?: :blank?,
+#     :include?: :exclude?
+#   `InverseBlocks` are methods that are inverted by inverting the return
+#   of the block that is passed to the method
+#   InverseBlocks:
+#     :select: :reject
+#     :select!: :reject!
 
 Style/Lambda:
   EnforcedStyle: line_count_dependent
@@ -741,15 +744,16 @@ Style/MethodName:
     - snake_case
     - camelCase
 
+# Rubocop > 0.47.1
 # Checks the grouping of mixins (`include`, `extend`, `prepend`) in `class` and
 # `module` bodies.
-Style/MixinGrouping:
-  EnforcedStyle: separated
-  SupportedStyles:
-    # separated: each mixed in module goes in a separate statement.
-    # grouped: mixed in modules are grouped into a single statement.
-    - separated
-    - grouped
+# Style/MixinGrouping:
+#   EnforcedStyle: separated
+#   SupportedStyles:
+#     # separated: each mixed in module goes in a separate statement.
+#     # grouped: mixed in modules are grouped into a single statement.
+#     - separated
+#     - grouped
 
 Style/ModuleFunction:
   EnforcedStyle: module_function
@@ -795,11 +799,12 @@ Style/MultilineHashBraceLayout:
     - new_line
     - same_line
 
-Style/MultilineMemoization:
-  EnforcedStyle: keyword
-  SupportedStyles:
-    - keyword
-    - braces
+# Rubocop > 0.47.1
+# Style/MultilineMemoization:
+#   EnforcedStyle: keyword
+#   SupportedStyles:
+#     - keyword
+#     - braces
 
 Style/MultilineMethodCallBraceLayout:
   EnforcedStyle: symmetrical
@@ -1320,12 +1325,13 @@ Lint/InheritException:
     - runtime_error
     - standard_error
 
-Lint/SafeNavigationChain:
-  Whitelist:
-    - present?
-    - blank?
-    - presence
-    - try
+# Rubocop 0.47.1
+# Lint/SafeNavigationChain:
+#   Whitelist:
+#     - present?
+#     - blank?
+#     - presence
+#     - try
 
 # Checks for unused block arguments
 Lint/UnusedBlockArgument:
@@ -1339,10 +1345,11 @@ Lint/UnusedMethodArgument:
 
 #################### Performance ###########################
 
-Performance/DoubleStartEndWith:
-  # Used to check for `starts_with?` and `ends_with?`.
-  # These methods are defined by `ActiveSupport`.
-  IncludeActiveSupportAliases: false
+# Rubocop > 0.47.1
+# Performance/DoubleStartEndWith:
+#   # Used to check for `starts_with?` and `ends_with?`.
+#   # These methods are defined by `ActiveSupport`.
+#   IncludeActiveSupportAliases: false
 
 Performance/RedundantMerge:
   # Max number of key-value pairs to consider an offense
